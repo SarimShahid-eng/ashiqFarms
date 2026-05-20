@@ -33,9 +33,9 @@
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
 
             <li><a href="{{route('dashboard')}}"><img src="{{ asset('assets/img/logo.png') }}" alt="" width="230px"></a></li>
-          @if(Auth::user()->id !== 2 )
+          {{-- @if(Auth::user()->id !== 2 )
             <li id="" class="ml-5"><a class=" button-new " href="#"  id="loginAsAdmin" ><i class="fas fa-arrow-left"></i> <span>Login Back to Admin</span> </a></li>
-          @endif
+          @endif --}}
         </ul>
     </form>
 
@@ -167,7 +167,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-            
+
     $('#loginAsAdmin').click(function(){
         // var currentUserId=$(this).data('session');
         var route="{{route('login.loginWithoutAuth')}}";
